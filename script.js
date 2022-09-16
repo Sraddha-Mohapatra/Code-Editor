@@ -45,11 +45,12 @@ lightMode.addEventListener("click", () => {
 });
 
 //Live code
-document.getElementById("live").onClick = function () {
-  if (this.checked) {
+document.querySelector("div").addEventListener("input", (e) => {
+
+  if (document.getElementById("live").checked) {
     editor.addEventListener("keyup", () => {
       const html = editor.textContent;
       iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
     });
   }
-};
+});
