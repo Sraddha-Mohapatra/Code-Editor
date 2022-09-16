@@ -46,7 +46,6 @@ lightMode.addEventListener("click", () => {
 
 //Live code
 document.querySelector("div").addEventListener("input", (e) => {
-
   if (document.getElementById("live").checked) {
     editor.addEventListener("keyup", () => {
       const html = editor.textContent;
